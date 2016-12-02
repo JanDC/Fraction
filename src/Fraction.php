@@ -24,6 +24,11 @@ class Fraction
         return DecimalToFraction::decimalToFraction($decimal);
     }
 
+    public function __toString()
+    {
+        return "{$this->numerator}/{$this->denominator}";
+    }
+
     /**
      * @return int
      */
