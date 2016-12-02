@@ -2,6 +2,8 @@
 PHP Class representing a rational number as a fraction (as opposed to a floating point value)
 
 
+see also https://en.wikipedia.org/wiki/Floating_point#Accuracy_problems
+
 ###Typical example in which floating points go horribly wrong: product discounts!
 
 #### Safe example (with precision=2)
