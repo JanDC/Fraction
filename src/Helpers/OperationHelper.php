@@ -15,7 +15,7 @@ class OperationHelper
      *
      * @throws InvalidArgumentException
      */
-    static function bringFractionToDenominator(Fraction &$fraction, $desiredDenominator)
+    static function bringFractionToDenominator(Fraction $fraction, $desiredDenominator)
     {
 
         if (!is_integer($desiredDenominator)) {

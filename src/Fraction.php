@@ -78,10 +78,11 @@ class Fraction
     {
         $denominator = $this->denominator * $fraction->denominator;
 
-        OperationHelper::bringFractionToDenominator($this, $denominator);
-        OperationHelper::bringFractionToDenominator($fraction, $denominator);
+        $leftFraction = OperationHelper::bringFractionToDenominator($this, $denominator);
+        $rightFraction = OperationHelper::bringFractionToDenominator($fraction, $denominator);
 
-        $this->numerator += $fraction->numerator;
+        $this->numerator = $leftFraction->numerator + $rightFraction->numerator;
+        $this->denominator = $denominator;
         return $this;
     }
 
@@ -94,10 +95,12 @@ class Fraction
     {
         $denominator = $this->denominator * $fraction->denominator;
 
-        OperationHelper::bringFractionToDenominator($this, $denominator);
-        OperationHelper::bringFractionToDenominator($fraction, $denominator);
+        $leftFraction = OperationHelper::bringFractionToDenominator($this, $denominator);
+        $rightFraction = OperationHelper::bringFractionToDenominator($fraction, $denominator);
 
-        $this->numerator -= $fraction->numerator;
+        $this->numerator = $leftFraction->numerator - $rightFraction->numerator;
+        $this->denominator = $denominator;
+
         return $this;
     }
 
